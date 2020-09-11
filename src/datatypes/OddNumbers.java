@@ -9,15 +9,12 @@ public class OddNumbers {
         System.out.println("Input Number = ");
 
 
-        if (scanner.hasNextInt())
-        {
+        if (scanner.hasNextInt()) {
             int numberInputted = scanner.nextInt();
             if (numberInputted % 2 == 0) {
                 System.out.println("Number is Even");
-            }
-            else System.out.println("Number is Odd");
-        }
-        else System.out.println("Please enter correct Number");
+            } else System.out.println("Number is Odd");
+        } else System.out.println("Please enter correct Number");
 
         System.out.println("Bye!");
     }

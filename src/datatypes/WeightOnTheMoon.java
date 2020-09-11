@@ -8,17 +8,14 @@ public class WeightOnTheMoon {
         System.out.println("Input three numbers = ");
 
 
-        if (scanner.hasNextFloat())
-        {
+        if (scanner.hasNextFloat()) {
 
             float earthWeight = scanner.nextFloat();
             if (earthWeight > 0 && earthWeight <= 250) {
                 float moonWeight = (float) (earthWeight * 0.17);
                 System.out.println(moonWeight);
-            }
-            else System.out.println("Please get weight between 0 and 250 for flying to the moon");
-        }
-        else System.out.println("Please enter your correct weight");
+            } else System.out.println("Please get weight between 0 and 250 for flying to the moon");
+        } else System.out.println("Please enter your correct weight");
 
     }
 }

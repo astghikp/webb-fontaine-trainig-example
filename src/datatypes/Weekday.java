@@ -7,10 +7,9 @@ public class Weekday {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input Number = ");
 
-        if (scanner.hasNextInt())
-        {
+        if (scanner.hasNextInt()) {
             int numberInputted = scanner.nextInt();
-            if( numberInputted >0 && numberInputted < 8) {
+            if (numberInputted > 0 && numberInputted < 8) {
                 switch (numberInputted) {
                     case 1:
                         System.out.println("Monday");
@@ -35,9 +34,7 @@ public class Weekday {
                         break;
                 }
 
-            }
-            else System.out.println("Not weekday number is entered");
-        }
-        else System.out.println("Please enter valid number");
+            } else System.out.println("Not weekday number is entered");
+        } else System.out.println("Please enter valid number");
     }
 }
