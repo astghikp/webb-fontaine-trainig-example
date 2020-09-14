@@ -9,28 +9,33 @@ import static java.lang.System.out;
 public class ReverseArray {
     public static void main(String[] args) {
 
-        ArrayList<Integer> myArray = new ArrayList<>();
+
         Scanner scanner = new Scanner(in);
         out.println("Input length of Array");
+        int length = 0;
 
         if (scanner.hasNextInt()) {
-            int length = scanner.nextInt();
-            for (int i = 0; i < length; i++) {
+            length = scanner.nextInt();
+        } else System.out.println("Please enter valid number");
+            int [] myArray = new int[length];
+            for (int i = 0; i < myArray.length; i++) {
                 out.println("Enter " + (i + 1) + " number:");
-                Integer arrayNumber = scanner.nextInt();
-                myArray.add(arrayNumber);
+                int arrayNumber = scanner.nextInt();
+                myArray[i]= arrayNumber;
             }
             out.println("Your reverse Array is:");
 
             for (int i=0; i<length/2; i++) {
-                int temp = myArray.get(i);
-                myArray.set(i, myArray.get(length-1-i));
-                myArray.set(length-1-i, temp);
+                int temp = myArray[i];
+                myArray[i] = myArray[length-1-i];
+                myArray[length-1-i] = temp;
 
 
             }
-            out.println(myArray);
-        } else System.out.println("Please enter valid number");
+        for ( int i=0; i< myArray.length; i++) {
+            out.println("Array in reverse:"+ myArray[i]);
+        }
+
 
     }
 }

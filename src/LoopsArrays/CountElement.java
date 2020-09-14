@@ -10,30 +10,41 @@ public class CountElement {
     public static void main(String[] args) {
 
 
-        int[] myArray = {4, 8, 15, 16, 23, 42, 815, 5, 42, 42, 42};
-        HashMap<Integer, Integer> count_map = new HashMap<>(); // googled again :)
-        for (int value : myArray) {
-            if (count_map.get(value) != null) {
-                int counter = count_map.get(value);
-                count_map.put(value, counter + 1);
-            } else {
-                count_map.put(value, 1);
-            }
+        Scanner scanner = new Scanner(in);
+        out.println("Input length of Array");
+        int length = 0;
+
+        if (scanner.hasNextInt()) {
+            length = scanner.nextInt();
+        } else System.out.println("Please enter valid number");
+        int [] myArray = new int[length];
+        for (int i = 0; i < myArray.length; i++) {
+            out.println("Enter " + (i + 1) + " number:");
+            int arrayNumber = scanner.nextInt();
+            myArray[i]= arrayNumber;
         }
         out.println("Input number");
-        Scanner scanner = new Scanner(in);
         if (scanner.hasNextInt()) {
             int k = scanner.nextInt();
-            boolean hasKElement = false;
-            for (int i : count_map.keySet())   //google again
-            {
-                if (k > 0 && count_map.get(i) == k) {
-                    out.println("Elements that appears " + k + "times is:" + i);
-                    hasKElement = true;
-                }
+           for(int i=0; i<myArray.length; i++)
+           {
+               int counter =0;
+               for(int j=i+1; j<myArray.length; j++)
+               {
+                   if (myArray[i]== myArray[j])
+                       counter ++;
+                   if (counter >k -1)
+                       break;
 
-            }
-            if (!hasKElement) out.println("There's not element in massive for " + k + " times");
+               }
+               if (counter == k -1 )
+               {
+                   out.println("The element is:" + myArray[i]);
+                   break;
+               }
+           }
+
+
         } else out.println("Enter valid number");
 
 

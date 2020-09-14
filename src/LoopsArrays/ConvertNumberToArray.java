@@ -6,7 +6,7 @@ import java.util.Scanner;
 import static java.lang.System.in;
 import static java.lang.System.out;
 
-public class ConvertNumberToArray {
+public class ConvertNumberToArray {    // I decided to leave this one as it was with ArrayList cause there will not be logical changes
     public static void main(String[] args) {
         ArrayList<Integer> Array = new ArrayList<>();
         Scanner scanner = new Scanner(in);

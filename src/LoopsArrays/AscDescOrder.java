@@ -8,35 +8,45 @@ import static java.lang.System.out;
 
 public class AscDescOrder {
     public static void main(String[] args) {
-        ArrayList<Integer> myArray = new ArrayList<>();
         Scanner scanner = new Scanner(in);
-        out.println("Input length of Array");
+        int arraySize = 0;
 
+        out.println("Input length of Array");
         if (scanner.hasNextInt()) {
-            int length = scanner.nextInt();
-            for (int i = 0; i < length; i++) {
+            arraySize = scanner.nextInt();
+
+        } else out.println("Please enter valid number");
+        int [] myArray = new int [arraySize];
+        out.println("Input array");
+            for (int i = 0; i < myArray.length; i++) {
                 out.println("Enter " + (i + 1) + " number:\n");
-                Integer arrayNumber = scanner.nextInt();
-                myArray.add(arrayNumber);
+                while (!scanner.hasNextInt()) {
+                    out.println("Please enter valid number");
+                    scanner.next();
+                }
+                myArray[i] = scanner.nextInt();
             }
 
-            for (int j = 0; j < length - 1; j++) {
-                for (int i = j + 1; i < length; i++) {
-                    if (myArray.get(j) > myArray.get(i)) {
-                        int element = myArray.get(j);
-                        myArray.set(j, myArray.get(i));
-                        myArray.set(i, element);
+            for (int i = 0; i < myArray.length - 1; i++) {
+                for (int j = i + 1; j < myArray.length; j++) {
+                    if (myArray[i] > myArray[j]) {
+                        int element = myArray[i];
+                        myArray[i] = myArray[j];
+                        myArray[j] = element;
+
 
                     }
                 }
             }
-            out.println("Array in ascending order:" + myArray);
+            for ( int arrElement: myArray) {
+                out.println("Array in ascending order:" + arrElement);
+            }
             out.println("Array in descending order: ");
-            for (int j = length - 1; j >= 0; j--) {
-                out.println(myArray.get(j));
+            for (int j = myArray.length - 1; j >= 0; j--) {
+                out.println(myArray[j]);
             }
 
-        } else System.out.println("Please enter valid number");
+
     }
 }
 

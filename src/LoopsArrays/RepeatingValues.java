@@ -3,15 +3,14 @@ package LoopsArrays;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import static java.lang.System.out;
+
 public class RepeatingValues {
     public static void main(String[] args) {
         int[] firstArray = {5, 4, 34, -6, 42, 34};
-        int[] secondArray = {4, 8, 15, 16, 23, 42, 815, 5};
-        ArrayList<Integer> myArray = new ArrayList<>();
-
-
-        Arrays.sort(firstArray);
-        Arrays.sort(secondArray);
+        int[] secondArray = {4, 8, 15, 16, 23, 42, 815};
+        int [] myArray = new int[firstArray.length];
+        int count = 0;
 
         for (int i : firstArray) {
             boolean contains = false;
@@ -22,9 +21,15 @@ public class RepeatingValues {
                 }
             }
             if (contains)
-                myArray.add(i);
+            {
+
+                myArray[count] =i;
+                count++;
+            }
 
         }
-        System.out.println(" The repeating values are:" + myArray);
+        for ( int i=0; i< count; i++) {
+            out.println("The repeating values are:" + myArray[i]);
+        }
     }
 }
