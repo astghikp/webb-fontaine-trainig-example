@@ -34,7 +34,8 @@ public class TwoArrays {
         }
         for (int i = lengthFirst; i < lengthFirst + lengthSecond; i++) {
             mergedArray[i] = array2[i - lengthFirst];
-        }
+
+                    }
         ArrayAPI element = new ArrayAPI();
         element.arrayPrintOut(mergedArray, "Merged");
 
