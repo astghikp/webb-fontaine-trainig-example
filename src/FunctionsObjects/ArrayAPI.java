@@ -6,7 +6,7 @@ public class ArrayAPI {
 
 // Check next positive input
 
-    public int getPositiveInput(Scanner scanner, String message) {
+    public static int getPositiveInput(Scanner scanner, String message) {
         System.out.println("Please enter positive Number for " + message);
         while (!scanner.hasNextInt()) {
             System.out.println("Please enter positive int number");
@@ -28,7 +28,7 @@ public class ArrayAPI {
 
 
     // input Array Method by Random
-    public void arrayInput(int[] arrayInp, int length) {
+    public static void arrayInput(int[] arrayInp, int length) {
         for (int i = 0; i < arrayInp.length; i++) {
             arrayInp[i] = (int) (Math.random() * 100);
 
@@ -37,7 +37,7 @@ public class ArrayAPI {
 
     }
 
-    public void arrayInput(double[] arrayInp, int length) {
+    public static void arrayInput(double[] arrayInp, int length) {
         for (int i = 0; i < arrayInp.length; i++) {
             arrayInp[i] = Math.random() * 10;
 
@@ -49,7 +49,7 @@ public class ArrayAPI {
     }
 
     //Input Array ByUser
-    public void arrayInputByUser(int[] arrayInp, int length) {
+    public static void arrayInputByUser(int[] arrayInp, int length) {
         Scanner scanner = new Scanner(System.in);
 
         for (int i = 0; i < arrayInp.length; i++) {
@@ -61,13 +61,13 @@ public class ArrayAPI {
 
     }
 
-    public void arrayPrintOut(int[] array, String message) {
+    public static void arrayPrintOut(int[] array, String message) {
         for (int element : array) {
             System.out.println("Your" + message + " Array is: " + element);
         }
     }
 
-    public int getArrayElementIndex(Scanner scanner, int length) {
+    public static int getArrayElementIndex(Scanner scanner, int length) {
         System.out.println("Please enter positive Number Less than Array length");
         while (!scanner.hasNextInt()) {
             System.out.println("Please enter positive int number");

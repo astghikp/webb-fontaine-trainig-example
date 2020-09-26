@@ -6,15 +6,14 @@ public class IncreasedByTen {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ArrayAPI arrayApi = new ArrayAPI();
-        // Get Array Length
-        int length = arrayApi.getPositiveInput(scanner, "Array length");
+        /* Get Array Length */
+        int length = ArrayAPI.getPositiveInput(scanner, "Array length");
         //Get Element index
-        int indexOfElement = arrayApi.getArrayElementIndex(scanner, length);
+        int indexOfElement = ArrayAPI.getArrayElementIndex(scanner, length);
         //input Array
         double[] myArray = new double[length];
         //arrayApi.arrayInput(myArray, length);
-        arrayApi.arrayInput(myArray, length);
+        ArrayAPI.arrayInput(myArray, length);
         //Increase Array by 10%
         IncreaseArrayElementByIndex(myArray, indexOfElement);
 

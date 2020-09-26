@@ -6,13 +6,12 @@ public class IncreaseArrayBy2 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ArrayAPI arrayApi = new ArrayAPI();
         // Get Array Length
-        int length = arrayApi.getPositiveInput(scanner, "Array length");
+        int length = ArrayAPI.getPositiveInput(scanner, "Array length");
         //input Array
         int[] myArray = new int[length];
         //arrayApi.arrayInput(myArray, length);
-        arrayApi.arrayInputByUser(myArray, length);
+        ArrayAPI.arrayInputByUser(myArray, length);
         //Double Array
         DoubleArrays(myArray, length);
 
