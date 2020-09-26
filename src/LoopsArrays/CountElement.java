@@ -1,6 +1,5 @@
 package LoopsArrays;
 
-import java.util.HashMap;
 import java.util.Scanner;
 
 import static java.lang.System.in;
@@ -17,32 +16,29 @@ public class CountElement {
         if (scanner.hasNextInt()) {
             length = scanner.nextInt();
         } else System.out.println("Please enter valid number");
-        int [] myArray = new int[length];
+        int[] myArray = new int[length];
         for (int i = 0; i < myArray.length; i++) {
             out.println("Enter " + (i + 1) + " number:");
             int arrayNumber = scanner.nextInt();
-            myArray[i]= arrayNumber;
+            myArray[i] = arrayNumber;
         }
         out.println("Input number");
         if (scanner.hasNextInt()) {
             int k = scanner.nextInt();
-           for(int i=0; i<myArray.length; i++)
-           {
-               int counter =0;
-               for(int j=i+1; j<myArray.length; j++)
-               {
-                   if (myArray[i]== myArray[j])
-                       counter ++;
-                   if (counter >k -1)
-                       break;
+            for (int i = 0; i < myArray.length; i++) {
+                int counter = 0;
+                for (int j = i + 1; j < myArray.length; j++) {
+                    if (myArray[i] == myArray[j])
+                        counter++;
+                    if (counter > k - 1)
+                        break;
 
-               }
-               if (counter == k -1 )
-               {
-                   out.println("The element is:" + myArray[i]);
-                   break;
-               }
-           }
+                }
+                if (counter == k - 1) {
+                    out.println("The element is:" + myArray[i]);
+                    break;
+                }
+            }
 
 
         } else out.println("Enter valid number");
