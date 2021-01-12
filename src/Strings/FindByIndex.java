@@ -1,5 +1,7 @@
 package Strings;
 
+import org.testng.annotations.Test;
+
 import java.util.Scanner;
 
 public class FindByIndex {
@@ -17,6 +19,7 @@ public class FindByIndex {
 
 
     }
+
 
   static int getPositiveInput(Scanner scanner) {
         System.out.println("Please enter positive Number for character");

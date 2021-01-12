@@ -33,9 +33,4 @@ public class Line {
         this.secondPoint = secondPoint;
     }
 
-//   public double lineLength (Line line)
-//   {
-//            PointLineAPI.DistanceBetweenPoints(line.getSecondPoint(), line.getFirstPoint());
-//   }
-
 }

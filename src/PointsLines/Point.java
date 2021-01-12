@@ -3,7 +3,8 @@ package PointsLines;
 public class Point {
 
     // point will have 2 coordinates double type
-    private double x, y;
+    private double x;
+    private double y;
 
 
     //constructor for coordinates

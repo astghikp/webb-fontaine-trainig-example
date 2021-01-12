@@ -1,5 +1,7 @@
 package Strings;
 
+import org.testng.annotations.Test;
+
 import java.util.Scanner;
 
 public class StringStarts {
@@ -13,4 +15,8 @@ public class StringStarts {
             System.out.println(stringInputted + " starts with "+ searchText);
         else System.out.println(stringInputted + " doesn't start with " + searchText);
     }
+
+
 }
+
+

@@ -1,7 +1,4 @@
 package PointsLines;
-// import java.awt.Polygon;
-// Parzvec Polygoni constructor@ int a uzum :(
-// Urish banadzev chgta
 
 public final class PointLineAPI {
     private PointLineAPI() {
@@ -23,7 +20,7 @@ public final class PointLineAPI {
         Point midPoint = new Point(0, 0);
         if (point1 == null || point2 == null || distanceBetweenPoints(point1, point2) == 0) {
             System.out.println(" You gave not valid value");
-            return midPoint;
+            return null;
         } else {
             midPoint.setX((point1.getX() + point2.getX()) / 2);
             midPoint.setY((point1.getY() + point2.getY()) / 2);
@@ -55,10 +52,6 @@ public final class PointLineAPI {
         double distancep1p2 = distanceBetweenPoints(point1, point2);
         double distancep1p3 = distanceBetweenPoints(point1, point3);
         double distancep1p4 = distanceBetweenPoints(point1, point4);
-        //  double distancep1p4 = distanceBetweenPoints(point1, point4);
-
-        //  if (distancep1p2 == 0 || distancep2p3 == 0 || distancep1p4 == 0 || distancep3p4 ==0)
-        //  return false;
 
 
         if (distancep1p2 == distancep1p3) {

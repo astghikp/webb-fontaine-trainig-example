@@ -7,8 +7,10 @@ import java.util.Set;
 
 public class APIMethods {
 
+    private APIMethods() {}
+
     private static boolean checkDbIsFilled() {
-        boolean listIsEmpty = BooksDB.booksList() ==null;
+        boolean listIsEmpty = DataProviderBooks.booksList() ==null;
         if ( listIsEmpty) {
             System.out.println(" Book list is empty ");
         }
@@ -22,8 +24,8 @@ public class APIMethods {
         Set<String> authorsList = new HashSet<>();
 
         // remove repeating Authors
-        for (int i = 0; i < BooksDB.booksList().length; i++) {
-            authorsList.add(BooksDB.booksList()[i].getAuthor().getName());
+        for (int i = 0; i < DataProviderBooks.booksList().length; i++) {
+            authorsList.add(DataProviderBooks.booksList()[i].getAuthor().getName());
 
         }
         return authorsList.toString();
@@ -34,9 +36,9 @@ public class APIMethods {
             return null;
         StringBuilder bookList = new StringBuilder();
 
-        for (int i = 0; i < BooksDB.booksList().length; i++) {
+        for (int i = 0; i < DataProviderBooks.booksList().length; i++) {
 
-            bookList.append(BooksDB.booksList()[i].getTitle()).append(" ");
+            bookList.append(DataProviderBooks.booksList()[i].getTitle()).append(" ");
         }
         return bookList.toString();
 
@@ -48,9 +50,9 @@ public class APIMethods {
         if (search == null)
             return null;
         StringBuilder bookList = new StringBuilder();
-        for (int i = 0; i < BooksDB.booksList().length; i++) {
-            if (BooksDB.booksList()[i].getAuthor().toString().contains(search))
-                bookList.append(BooksDB.booksList()[i].getTitle()).append(" ");
+        for (int i = 0; i < DataProviderBooks.booksList().length; i++) {
+            if (DataProviderBooks.booksList()[i].getAuthor().toString().contains(search))
+                bookList.append(DataProviderBooks.booksList()[i].getTitle()).append(" ");
 
         }
         if (bookList.length() == 0) {
@@ -66,10 +68,10 @@ public class APIMethods {
             return null;
         int counter = 0;
         // ArrayList<Books> listOfTop = new ArrayList<Books>();
-        Books[] listOfTop = new Books[BooksDB.booksList().length];
-        for (int i = 0; i < BooksDB.booksList().length; i++) {
-            if (BooksDB.booksList()[i].getAuthor().toString().contains(search)) {
-                listOfTop[counter] = new Books(BooksDB.booksList()[i]);
+        Book[] listOfTop = new Book[DataProviderBooks.booksList().length];
+        for (int i = 0; i < DataProviderBooks.booksList().length; i++) {
+            if (DataProviderBooks.booksList()[i].getAuthor().toString().contains(search)) {
+                listOfTop[counter] = new Book(DataProviderBooks.booksList()[i]);
                 counter++;
             }
         }
@@ -81,7 +83,7 @@ public class APIMethods {
             for (int i = 0; i < counter - 1; i++) {
                 if (listOfTop[i] == null)
                     continue;
-                Books temp;
+                Book temp;
 
                 if (listOfTop[i].getRating() < listOfTop[i + 1].getRating()) {
                     temp = listOfTop[i];
@@ -108,9 +110,9 @@ public class APIMethods {
         if (search == null)
             return null;
         StringBuilder authorList = new StringBuilder();
-        for (int i = 0; i < BooksDB.booksList().length; i++) {
-            if (BooksDB.booksList()[i].getAuthor().toString().contains(search))
-                authorList.append(BooksDB.booksList()[i].getAuthor().getName());
+        for (int i = 0; i < DataProviderBooks.booksList().length; i++) {
+            if (DataProviderBooks.booksList()[i].getAuthor().toString().contains(search))
+                authorList.append(DataProviderBooks.booksList()[i].getAuthor().getName());
 
 
         }
@@ -128,9 +130,9 @@ public class APIMethods {
         if (search == null)
             return null;
         StringBuilder bookList = new StringBuilder();
-        for (int i = 0; i < BooksDB.booksList().length; i++) {
-            if (BooksDB.booksList()[i].getTitle().contains(search))
-                bookList.append(BooksDB.booksList()[i].getTitle());
+        for (int i = 0; i < DataProviderBooks.booksList().length; i++) {
+            if (DataProviderBooks.booksList()[i].getTitle().contains(search))
+                bookList.append(DataProviderBooks.booksList()[i].getTitle());
 
         }
         if (bookList.length() == 0) {
@@ -148,9 +150,9 @@ public class APIMethods {
         if (startDate == null || endDate == null)
             return null;
         StringBuilder bookList = new StringBuilder();
-        for (int i = 0; i < BooksDB.booksList().length; i++) {
-            if (BooksDB.booksList()[i].getDate().isAfter(startDate) && BooksDB.booksList()[i].getDate().isBefore(endDate))
-                bookList.append(BooksDB.booksList()[i].getTitle()).append(" ");
+        for (int i = 0; i < DataProviderBooks.booksList().length; i++) {
+            if (DataProviderBooks.booksList()[i].getDate().isAfter(startDate) && DataProviderBooks.booksList()[i].getDate().isBefore(endDate))
+                bookList.append(DataProviderBooks.booksList()[i].getTitle()).append(" ");
 
         }
         if (bookList.length() == 0) {

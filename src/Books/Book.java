@@ -3,7 +3,7 @@ package Books;
 import java.time.LocalDate;
 
 
-public class Books {
+public class Book {
     private String title;
     private Authors author;
     private LocalDate date;
@@ -11,7 +11,7 @@ public class Books {
     private double rating;
     private double cost;
 
-    public Books(String title, Authors author, LocalDate date, String genre, double rating, double cost) {
+    public Book(String title, Authors author, LocalDate date, String genre, double rating, double cost) {
         setTitle(title);
         setAuthor(author);
         setDate(date);
@@ -20,7 +20,7 @@ public class Books {
         setCost(cost);
     }
 
-    public Books(Books book) {
+    public Book(Book book) {
         setTitle(book.getTitle());
         setAuthor(book.getAuthor());
         setDate(book.getDate());
@@ -30,7 +30,7 @@ public class Books {
 
     }
 
-    public Books() {
+    public Book() {
 
     }
 

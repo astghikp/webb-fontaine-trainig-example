@@ -13,8 +13,6 @@ public class TestsApi {
         Point myPoint2 = new Point(15, 8);
         Point myPoint1 = new Point(1, 2);
         double distance = PointLineAPI.distanceBetweenPoints(myPoint1, myPoint2);
-        //Senc areci heto mer dasi videon veranayeci
-        // Assert.assertEquals(distance,15.23, 0.011);
         DecimalFormat coordinates = new DecimalFormat("0.00");
         Assert.assertEquals(coordinates.format(distance), coordinates.format(15.231546));
 
@@ -68,11 +66,9 @@ public class TestsApi {
         Point myPoint2 = new Point(15, 8);
         Point myPoint1 = new Point(15, 8);
         Point middlePoint = PointLineAPI.midPoint(null, myPoint2);
-        Assert.assertEquals(middlePoint.getX(), 0);
-        Assert.assertEquals(middlePoint.getY(), 0);
+        Assert.assertNull(middlePoint);
         middlePoint = PointLineAPI.midPoint(myPoint1, null);
-        Assert.assertEquals(middlePoint.getX(), 0);
-        Assert.assertEquals(middlePoint.getY(), 0);
+        Assert.assertNull(middlePoint);
 
     }
 
