@@ -38,7 +38,6 @@ public class Assignee {
     // can we do such a thing? :D
     public enum Position {
         PROJECT_MANAGER,
-        PROJECT_OWNER,
         BACK_END_DEVELOPER,
         FRONT_END_DEVELOPER,
         MOBILE_DEVELOPER,

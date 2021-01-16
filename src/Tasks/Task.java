@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class Task {
 
-    //  title, description, start and end dates, priority (this is a enum), Assignee (note that this is also class - with name, etc..), status (this is also enum).
+    //  title, description, start and end dates, priority (this is a enum), Assignee (note that this is also class - with name, etc..), status (this enum).
     private int taskID;
     private String taskTitle;
     private String taskDescription;

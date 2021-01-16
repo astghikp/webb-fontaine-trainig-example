@@ -70,7 +70,7 @@ public class TasksAPI {
             System.out.println("No tasks are found");
         }
 
-        // same here
+        //same here
         try {
             date.equals(null);
         } catch (NullPointerException instanceIsNul) {

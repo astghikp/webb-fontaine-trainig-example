@@ -18,7 +18,7 @@ public class DataProviderTasks {
                 .setTaskAssignedTo(users[0])
                 .setTaskDescription("lorem ipsum")
                 .setTaskPriority(Priority.MEDIUM)
-                .setTaskStartDate(LocalDate.of(2017, 12, 6))
+                .setTaskStartDate(LocalDate.of(2017, 11, 6))
                 .setTaskEndDate(LocalDate.of(2018, 12, 6))
                 .setTaskStatus(Status.CREATED)
                 .build();
