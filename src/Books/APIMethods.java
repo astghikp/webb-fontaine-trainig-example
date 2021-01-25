@@ -9,6 +9,7 @@ public class APIMethods {
 
     private APIMethods() {}
 
+
     private static boolean checkDbIsFilled() {
         boolean listIsEmpty = DataProviderBooks.booksList() ==null;
         if ( listIsEmpty) {
