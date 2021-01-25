@@ -1,8 +1,16 @@
 package Strings;
 
+import org.testng.annotations.Test;
+
 import java.util.Scanner;
 
 public class CountBrackets {
+    @Test
+    public void TestCountBrackets()
+    {
+
+
+    }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         //Input text
